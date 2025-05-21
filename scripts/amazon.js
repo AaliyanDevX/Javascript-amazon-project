@@ -42,12 +42,12 @@ products.forEach((product) => {
             <img class="product-rating-stars"
               src="images/ratings/rating-${product.rating.stars * 10}.png">
             <div class="product-rating-count link-primary">
-              ${product.priceCents / 100}
+              ${product.rating.stars}
             </div>
           </div>
 
           <div class="product-price">
-            $10.90
+            $${(product.priceCents / 100).toFixed(2)}
           </div>
 
           <div class="product-quantity-container">
@@ -77,5 +77,8 @@ products.forEach((product) => {
           </button>
         </div>
   `;
-  console.log(productsHTML);
 });
+
+console.log(productsHTML);
+
+document.querySelector('.js-products-grid').innerHTML = productsHTML;
