@@ -22,6 +22,14 @@ const products = [{
     count: 56,
   },
   priceCents: 799,
+}, {
+  image: 'https://supersimple.dev/projects/amazon/images/products/black-2-slot-toaster.jpg',
+  name: '2 Slot Toaster - Black',
+  rating: {
+    stars: 5,
+    count:2917,
+  },
+  priceCents: 1899,
 }];
 
 let productsHTML = '';
@@ -42,7 +50,7 @@ products.forEach((product) => {
             <img class="product-rating-stars"
               src="images/ratings/rating-${product.rating.stars * 10}.png">
             <div class="product-rating-count link-primary">
-              ${product.rating.stars}
+              ${product.rating.count}
             </div>
           </div>
 
